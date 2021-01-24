@@ -1,26 +1,19 @@
 import React from 'react';
+import MyPosts from './Posts/MyPosts';
+import s from './Profile.module.css';
+
 
 const Profile = () => {
-  return <div className='content'>
+  return <div className={s.content}>
     <div>
       <img src='https://www.ultragadget.ru/images/pictures/5.jpg' />
     </div>
     <div>
       ava + description
     </div>
-    <div>
-      My posts
-      <div>
-        New post
-      </div>
-      <div>
-        post 1
-      </div>
-      <div>
-        post 2
-      </div>
-    </div>
+    <MyPosts />
   </div>
+  
 }
 
 export default Profile;
