@@ -1,19 +1,16 @@
 import React from 'react';
 import MyPosts from './Posts/MyPosts';
 import s from './Profile.module.css';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 
 const Profile = () => {
-  return <div className={s.content}>
-    <div>
-      <img src='https://www.ultragadget.ru/images/pictures/5.jpg' />
-    </div>
-    <div>
-      ava + description
-    </div>
+  return (
+  <div className={s.content}>
+    <ProfileInfo /> 
     <MyPosts />
   </div>
-  
+  )
 }
 
 export default Profile;

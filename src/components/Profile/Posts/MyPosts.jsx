@@ -4,16 +4,30 @@ import Post from './Post/Post';
 
 
 const MyPosts = () => {
+  
+  let postData = [
+    {message: 'Hi, how are you', like: 'like 2', id: '1'},
+    {message: 'It`s my first post' , like: 'like 10', id: '2'}
+  ]
+
   return (
-  <div className={s.content}>
-    <div>
-      My posts
-      <div className={s.posts}>
-        <Post message = 'Hi, how are you'/>
-        <Post message = "It's my first post"/>
+    <div className={s.postBlock}>
+      <div>
+        <h3>My posts</h3>
+      <div>
+          <div>
+            <textarea></textarea>
+          </div>
+          <div>
+            <button>Add post</button>
+          </div>
+        </div>
+        <div className={s.posts}>
+          <Post message={postData[0].message} like={postData[0].like} />
+          <Post message={postData[1].message} like={postData[1].like} />
+        </div>
       </div>
     </div>
-  </div>
   )
 }
 
